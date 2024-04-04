@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- My file css main -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
     <!-- Media css -->
     <link rel="stylesheet" href="css/media.css">
     <!-- Bootstrap Css File -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +19,20 @@
     <title>Document</title>
 </head>
 <body>
+    <!--Start Loading -->
+    <div class="loading">
+        <div class="loading-content">
+            <span>l</span>
+            <span>o</span>
+            <span>a</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+        </div>
+
+    </div>
+    <!-- End Loading -->
     <!-- Hedear -->
     
     <header class="navbar py-3 mb-5">
@@ -26,8 +41,18 @@
                 <span class="d-flex align-items-center justify-content-center me-1 mb-0 ">N</span>
                 <p class="m-0">NFTICO</p>
             </a>
-            <nav class="d-flex justify-content-between align-items-center">
+            <nav class="d-flex first-nav justify-content-between align-items-center">
                 <ul class="d-flex m-0 p-0">
+                    <li><a href="">Explore</a></li>
+                    <li><a href="">State</a></li>
+                    <li><a href="">Drops</a></li>
+                    <li><a href="">Activity</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-mobile">
+                <ul class="d-flex flex-column">
+                    <li><i class="fa-solid fa-xmark pointer-event" onclick=dontShowme()></i></li>
                     <li><a href="">Explore</a></li>
                     <li><a href="">State</a></li>
                     <li><a href="">Drops</a></li>
@@ -41,8 +66,11 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
                 </div>
-                <a class="mybtn py-2 px-3 ms-2">Get in Touch</a>
+                <a class="mybtn py-2 px-3 ms-2 d-none d-lg-block">Get in Touch</a>
             </div>
+            <i class="fa-solid fa-bars fs-4 d-md-none d-block " onclick=showme()></i>
+        
+            
 
         
         </div>
@@ -50,13 +78,13 @@
     <!-- End Header -->
     <!--Hero section  -->
     <div class="container">
-        <Section class="Hero d-flex p-3 position-relative gap-5">
+        <Section class="Hero d-flex align-items-center flex-wrap flex-lg-nowrap p-3 position-relative gap-5">
             <div class="Hero-content position-relative p-4">
-                <h1 class="mb-3 text-white">Discover, collect, and sell extraordinary <span>NFTs</span></h1>
+                <h1 class="mb-3 text-white">Discover, collect, and sell extraordinary <span data-text="NFTs">NFTs</span></h1>
                 <p class="mb-3 text-white">Our marketplace is the world’s first and largest NFT market for independent creators worldwide </p>
                 <div class="Hero-content-btn d-flex gap-3 mb-4 ">
                     <a href="#" class="mybtn py-2 px-4 text-white">Explore</a>
-                    <a href="#" class="mybtn py-2 px-4 text-white">Create</a>
+                    <a href="#" class="mybtn py-2 px-4 text-white mybtna">Create</a>
                 </div>
                 <div class="Hero-content-learn d-flex align-items-center gap-2">
                     <img src="img/video.svg" alt="">
@@ -65,7 +93,7 @@
                 <img src="img/image1.png" class="position-absolute" alt="">
                 <img src="img/imag2.png" class="position-absolute" alt="" srcset="">
             </div>
-            <div class="Hero-img position-relative">
+            <div class="Hero-img position-relative d-none d-lg-block">
                 <img src="img/HeroPic.png" class="mw-100 h-100" alt="" srcset="">
                 <!-- <img src="img/imgsahm.svg" class="position-absolute" alt="" srcset=""> -->
             </div>
@@ -81,7 +109,7 @@
     <!--end hero section  -->
     <!-- start lebel section -->
     <div class="container">
-        <section class="lebel d-flex align-items-center justify-content-between flex-wrap position-relative">
+        <section class="lebel d-flex align-items-center justify-content-center justify-content-lg-between flex-wrap position-relative">
             <p>We will take all the worry and guesswork out of your blockchain and cryptocurrency concerns.</p>
             <div class="lebel-rate text-center">
                 <p class="spec">30.000+</p>
@@ -103,12 +131,633 @@
         </section>
     </div>
     <!-- end lebel section -->
+    <!-- Start Special Header -->
     <div class="container">
         <div class="special-header">
             <p>NFTs</p>
             <p>Selected notable drops</p>
         </div>
     </div>
+    <!-- Start selected cards -->
+    <div class="container position-relative">
+        <div class="selected-cards d-flex justify-content-center justify-content-xl-between flex-wrap gap-4">
+            <div class="mycard p-4">
+                <img src="img/selected-img1.png" class="w-100" alt="">
+                <div class="mycard-header d-flex align-items-center justify-content-between mt-3">
+                    <h4 class="fw-semibold">Science Jobs</h4>
+                    <div class="like d-flex align-items-center gap-1">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>24</p>
+                    </div>
+                </div>
+                <div class="mycard-body d-flex justify-content-between align-items-center mt-3">
+                    <div class="text d-flex gap-1">
+                        <img src="img/shape.svg" alt="">
+                        <p>From 17.59 Flow</p>
+                    </div>
+                    <img src="img/Group.png" alt="">
+                </div>
+                <a class="mybtn mt-3 text-uppercase fw-bold d-block text-center" href="">Live now</a>
+
+            </div>
+            <div class="mycard p-4">
+                <img src="img/selected-img2.png" class="w-100" alt="">
+                <div class="mycard-header d-flex align-items-center justify-content-between mt-3">
+                    <h4 class="fw-semibold">Science Jobs</h4>
+                    <div class="like d-flex align-items-center gap-1">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>24</p>
+                    </div>
+                </div>
+                <div class="mycard-body d-flex justify-content-between align-items-center mt-3">
+                    <div class="text d-flex gap-1">
+                        <img src="img/shape.svg" alt="">
+                        <p>From 17.59 Flow</p>
+                    </div>
+                    <img src="img/Group.png" alt="">
+                </div>
+                <a class="mybtn mt-3 text-uppercase fw-bold d-block text-center" href="">Live now</a>
+
+            </div>
+            <div class="mycard p-4">
+                <img src="img/selected-img3.png" class="w-100" alt="">
+                <div class="mycard-header d-flex align-items-center justify-content-between mt-3">
+                    <h4 class="fw-semibold">Science Jobs</h4>
+                    <div class="like d-flex align-items-center gap-1">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>24</p>
+                    </div>
+                </div>
+                <div class="mycard-body d-flex justify-content-between align-items-center mt-3">
+                    <div class="text d-flex gap-1">
+                        <img src="img/shape.svg" alt="">
+                        <p>From 17.59 Flow</p>
+                    </div>
+                    <img src="img/Group.png" alt="">
+                </div>
+                <a class="mybtn mt-3 text-uppercase fw-bold d-block text-center" href="">Live now</a>
+
+            </div>
+            <div class="mycard p-4">
+                <img src="img/selected-img4.png" class="w-100" alt="">
+                <div class="mycard-header d-flex align-items-center justify-content-between mt-3">
+                    <h4 class="fw-semibold">Science Jobs</h4>
+                    <div class="like d-flex align-items-center gap-1">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>24</p>
+                    </div>
+                </div>
+                <div class="mycard-body d-flex justify-content-between align-items-center mt-3">
+                    <div class="text d-flex gap-1">
+                        <img src="img/shape.svg" alt="">
+                        <p>From 17.59 Flow</p>
+                    </div>
+                    <img src="img/Group.png" alt="">
+                </div>
+                <a class="mybtn mt-3 text-uppercase fw-bold d-block text-center" href="">Live now</a>
+
+            </div>
+            
+        </div>
+        <div class="elipse cards-elips-selected position-absolute"></div>
+    </div>
+    <!-- end selected cards -->
+    <!-- Special header -->
+    <div class="container">
+        <div class="special-header">
+            <p>NFTs</p>
+            <p>Top collections</p>
+        </div>
+    </div>
+    <!-- Start Collection card -->
+    <div class="container">
+        <div class="cards-collection d-flex flex-wrap gap-4 justify-content-center justify-content-xxl-between">
+            <div class="mycard d-flex justify-content-between align-items-center">
+                <div class="mycard-header d-flex gap-2">
+                        <img src="img/collection1.svg"  alt="">
+                    <div class="myheader">
+                        <h4 class="mb-3">Bored Ape Yacht Club</h4>
+                        <div class="shape d-flex gap-1">
+                            <img src="img/shape.svg" alt="">
+                            <p class="text-uppercase">10,450.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myfooter">
+                    <p class="mb-3 text-uppercase">2.9k ETH</p>
+                    <p>+10.00%</p>
+                </div>
+            </div>
+            <div class="mycard d-flex justify-content-between align-items-center">
+                <div class="mycard-header d-flex gap-2">
+                        <img src="img/collection2.svg" alt="">
+                    <div class="myheader">
+                        <h4 class="mb-3">Bored Ape Yacht Club</h4>
+                        <div class="shape d-flex gap-1">
+                            <img src="img/shape.svg" alt="">
+                            <p class="text-uppercase">10,450.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myfooter">
+                    <p class="mb-3 text-uppercase">2.9k ETH</p>
+                    <p>+10.00%</p>
+                </div>
+            </div>
+            <div class="mycard d-flex justify-content-between align-items-center">
+                <div class="mycard-header d-flex gap-2">
+                        <img src="img/collection3.svg" alt="">
+                    <div class="myheader">
+                        <h4 class="mb-3">Bored Ape Yacht Club</h4>
+                        <div class="shape d-flex gap-1">
+                            <img src="img/shape.svg" alt="">
+                            <p class="text-uppercase">10,450.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myfooter">
+                    <p class="mb-3 text-uppercase">2.9k ETH</p>
+                    <p>+10.00%</p>
+                </div>
+            </div>
+            <div class="mycard d-flex justify-content-between align-items-center">
+                <div class="mycard-header d-flex gap-2">
+                        <img src="img/collection4.svg" alt="">
+                    <div class="myheader">
+                        <h4 class="mb-3">Bored Ape Yacht Club</h4>
+                        <div class="shape d-flex gap-1">
+                            <img src="img/shape.svg" alt="">
+                            <p class="text-uppercase">10,450.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myfooter">
+                    <p class="mb-3 text-uppercase">2.9k ETH</p>
+                    <p>+10.00%</p>
+                </div>
+            </div>
+            <div class="mycard d-flex justify-content-between align-items-center">
+                <div class="mycard-header d-flex gap-2">
+                        <img src="img/collection5.svg" alt="">
+                    <div class="myheader">
+                        <h4 class="mb-3">Bored Ape Yacht Club</h4>
+                        <div class="shape d-flex gap-1">
+                            <img src="img/shape.svg" alt="">
+                            <p class="text-uppercase">10,450.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myfooter">
+                    <p class="mb-3 text-uppercase">2.9k ETH</p>
+                    <p>+10.00%</p>
+                </div>
+            </div>
+            <div class="mycard d-flex justify-content-between align-items-center">
+                <div class="mycard-header d-flex gap-2">
+                        <img src="img/collection6.svg" alt="">
+                    <div class="myheader">
+                        <h4 class="mb-3">Bored Ape Yacht Club</h4>
+                        <div class="shape d-flex gap-1">
+                            <img src="img/shape.svg" alt="">
+                            <p class="text-uppercase">10,450.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myfooter">
+                    <p class="mb-3 text-uppercase">2.9k ETH</p>
+                    <p>+10.00%</p>
+                </div>
+            </div>
+            <div class="mycard d-flex justify-content-between align-items-center">
+                <div class="mycard-header d-flex gap-2">
+                        <img src="img/collection7.svg" alt="">
+                    <div class="myheader">
+                        <h4 class="mb-3">Bored Ape Yacht Club</h4>
+                        <div class="shape d-flex gap-1">
+                            <img src="img/shape.svg" alt="">
+                            <p class="text-uppercase">10,450.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myfooter">
+                    <p class="mb-3 text-uppercase">2.9k ETH</p>
+                    <p>+10.00%</p>
+                </div>
+            </div>
+            <div class="mycard d-flex justify-content-between align-items-center">
+                <div class="mycard-header d-flex gap-2">
+                        <img src="img/collection8.svg" alt="">
+                    <div class="myheader">
+                        <h4 class="mb-3">Bored Ape Yacht Club</h4>
+                        <div class="shape d-flex gap-1">
+                            <img src="img/shape.svg" alt="">
+                            <p class="text-uppercase">10,450.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myfooter">
+                    <p class="mb-3 text-uppercase">2.9k ETH</p>
+                    <p>+10.00%</p>
+                </div>
+            </div>
+            <div class="mycard d-flex justify-content-between align-items-center">
+                <div class="mycard-header d-flex gap-2">
+                        <img src="img/collection9.svg" alt="">
+                    <div class="myheader">
+                        <h4 class="mb-3">Bored Ape Yacht Club</h4>
+                        <div class="shape d-flex gap-1">
+                            <img src="img/shape.svg" alt="">
+                            <p class="text-uppercase">10,450.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myfooter">
+                    <p class="mb-3 text-uppercase">2.9k ETH</p>
+                    <p>+10.00%</p>
+                </div>
+            </div>
+        </div>
+        <a href="" class="collection-btn mybtn mt-5 d-block text-white text-center m-auto">See All Collections </a>
+    </div>
+    <!-- end Collection card -->
+    <!-- Special header -->
+    <div class="container">
+        <div class="special-header">
+            <p>NFTs</p>
+            <p>Trending NFTs</p>
+        </div>
+    </div>
+    <!-- End Special Header -->
+    <!-- Start cards -->
+    <div class="container position-relative">
+        <section class="trending-cards gap-3 d-flex flex-wrap justify-content-center ">
+            <div class="mycard p-4">
+                <div class="img position-relative overflow-hidden">
+                    <img src="img/card-img1.png" alt="" srcset="">
+                    <button class="mybtn fw-bold text-white position-absolute">Buy Now</button>
+                    <div class="img-heart d-flex align-items-center">
+                        <i class="fa-solid fa-rotate-right me-3"></i>
+                        <div class="like d-flex align-items-center gap-1">
+                            <i class="fa-regular fa-heart"></i>
+                            <p>32</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-check d-flex align-items-center mt-3 mb-2 gap-2">
+                    <p>By Ya Chin-Ho</p>
+                    <img src="img/Check.svg" alt="" srcset="">
+                </div>
+                <h4>Venture Capitalist</h4>
+                <div class="mycard-footer d-flex justify-content-between mt-3">
+                    <div class="mycard-footer-content">
+                        <p>From</p>
+                        <p>Not for sale</p>
+                    </div>
+                    <div class="mycard-footer-content">
+                        <p>Highest bid</p>
+                        <p>2.835 ETH</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mycard p-4">
+                <div class="img position-relative overflow-hidden">
+                    <img src="img/card-img2.png" alt="" srcset="">
+                    <button class="mybtn fw-bold text-white position-absolute">Buy Now</button>
+                    <div class="img-heart d-flex align-items-center">
+                        <i class="fa-solid fa-rotate-right me-3"></i>
+                        <div class="like d-flex align-items-center gap-1">
+                            <i class="fa-regular fa-heart"></i>
+                            <p>32</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-check d-flex align-items-center mt-3 mb-2 gap-2">
+                    <p>By Ya Chin-Ho</p>
+                    <img src="img/Check.svg" alt="" srcset="">
+                </div>
+                <h4>Venture Capitalist</h4>
+                <div class="mycard-footer d-flex justify-content-between mt-3">
+                    <div class="mycard-footer-content">
+                        <p>From</p>
+                        <p>Not for sale</p>
+                    </div>
+                    <div class="mycard-footer-content">
+                        <p>Highest bid</p>
+                        <p>2.835 ETH</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mycard p-4">
+                <div class="img position-relative overflow-hidden">
+                    <img src="img/card-img3.png.png" alt="" srcset="">
+                    <button class="mybtn fw-bold text-white position-absolute">Buy Now</button>
+                    <div class="img-heart d-flex align-items-center">
+                        <i class="fa-solid fa-rotate-right me-3"></i>
+                        <div class="like d-flex align-items-center gap-1">
+                            <i class="fa-regular fa-heart"></i>
+                            <p>32</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-check d-flex align-items-center mt-3 mb-2 gap-2">
+                    <p>By Ya Chin-Ho</p>
+                    <img src="img/Check.svg" alt="" srcset="">
+                </div>
+                <h4>Venture Capitalist</h4>
+                <div class="mycard-footer d-flex justify-content-between mt-3">
+                    <div class="mycard-footer-content">
+                        <p>From</p>
+                        <p>Not for sale</p>
+                    </div>
+                    <div class="mycard-footer-content">
+                        <p>Highest bid</p>
+                        <p>2.835 ETH</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mycard p-4">
+                <div class="img position-relative overflow-hidden">
+                    <img src="img/card-img4.png" alt="" srcset="">
+                    <button class="mybtn fw-bold text-white position-absolute">Buy Now</button>
+                    <div class="img-heart d-flex align-items-center">
+                        <i class="fa-solid fa-rotate-right me-3"></i>
+                        <div class="like d-flex align-items-center gap-1">
+                            <i class="fa-regular fa-heart"></i>
+                            <p>32</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-check d-flex align-items-center gap-2 mt-3 mb-2">
+                    <p>By Ya Chin-Ho</p>
+                    <img src="img/Check.svg" alt="" srcset="">
+                </div>
+                <h4>Venture Capitalist</h4>
+                <div class="mycard-footer d-flex justify-content-between mt-3">
+                    <div class="mycard-footer-content">
+                        <p>From</p>
+                        <p>Not for sale</p>
+                    </div>
+                    <div class="mycard-footer-content">
+                        <p>Highest bid</p>
+                        <p>2.835 ETH</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="elipse elipse-trending position-absolute"></div>
+    </div>
+    <!-- end cards -->
+    <!-- Start special header-->
+    <div class="container">
+        <div class="special-header">
+            <p>NFTs</p>
+            <p>Resouces for getting started</p>
+        </div>
+    </div>
+    <!-- End special header-->
+    <!-- Start ressource -->
+    <div class="container">
+        <div class="ressource d-flex justify-content-center justify-content-xl-between flex-wrap flex-column flex-lg-row">
+            <div class="ressource-image position-relative">
+                <div class="img w-100 overflow-hidden">
+                    <img src="img/ressource.png" class="w-100" alt="">
+                </div>
+                <div class="ressource-img position-absolute p-4">
+                    <div class="ressource-img-content d-flex gap-5 align-items-center ">
+                        <a href="" class="mybtn text-white fw-bolder">NFT Token</a>
+                        <div class="ressource-coment d-flex gap-2 ">
+                            <img src="img/ant-design_comment-outlined.svg" alt="">
+                            <p>No Comment</p>
+                        </div>
+                    </div>
+                    <h2 class="mt-3 mb-0">The Seven Secrets I should have received NFTs. </h2>
+                    <div class="ressource-footer d-flex align-items-center gap-3 mt-3">
+                        <img src="img/resource-footer.svg" alt="">
+                        <div class="footer-content">
+                            <p>Election Season</p>
+                            <p>June 2, 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ressource-content d-flex flex-column justify-content-between align-items-center ">
+                <div class="ressource-content-1 position-relative d-flex align-items-center">
+                    <img src="img/ressource-img-1.png" class="ressource-content-img" alt="">
+                    <div class="ressource-content-data">
+                        <div class="ressource-img-content d-flex gap-2 align-items-center ">
+                            <a href="" class="mybtn text-white fw-bolder">Game</a>
+                            <a href="" class="mybtn text-white fw-bolder">Nft</a>
+                            <div class="ressource-coment d-flex gap-2 ">
+                                <img src="img/ant-design_comment-outlined.svg" alt="">
+                                <p>No Comment</p>
+                            </div>
+                        </div>
+                        <h2 class="mt-3 mb-0">I think I minted duplicate NFTs </h2>
+                        <div class="ressource-footer d-flex align-items-center gap-3 mt-3">
+                            <img src="img/ressourse2.svg" alt="">
+                            <div class="footer-content">
+                                <p>Courtney Henry</p>
+                                <p>May 27, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ressource-content-1 d-flex align-items-center">
+                    <img src="img/ressourse_img2.png" class="ressource-content-img" alt="">
+                    <div class="ressource-content-data">
+                        <div class="ressource-img-content d-flex gap-2 align-items-center ">
+                            <a href="" class="mybtn text-white fw-bolder">NFT Token</a>
+                            <a href="" class="mybtn text-white fw-bolder">Nft</a>
+                            <div class="ressource-coment d-flex gap-2 ">
+                                <img src="img/ant-design_comment-outlined.svg" alt="">
+                                <p>No Comment</p>
+                            </div>
+                        </div>
+                        <h2 class="mt-3 mb-0">The  Marketplace isn’t working </h2>
+                        <div class="ressource-footer d-flex align-items-center gap-3 mt-3">
+                            <img src="img/ressourse3.svg" alt="">
+                            <div class="footer-content">
+                                <p>Courtney Henry</p>
+                                <p>May 27, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- <div class="ressource-content-2"></div> -->
+            </div>
+
+        </div>
+    </div>
+    <!-- End ressource -->
+    <div class="container">
+        <div class="d-flex justify-content-lg-between flex-wrap justify-content-center flex-column flex-lg-row align-items-center browser-header">
+            <div class="special-header  m-0">
+                <p>NFTs</p>
+                <p>Browse NFTs</p>
+            </div>
+            <div class="browse-btn d-flex align-items-center">
+                <a href="" class=" mybtn text-white me-5">All NFT,s </a>
+                <a href="" class=" text-white me-5 ">Art</a>
+                <a href="" class=" text-white me-5">Games</a>
+                <a href="" class="text-white me-5">Sports</a>
+                <a href="" class="text-white me-5">Tranding Cards</a>
+                
+            </div>
+        </div>
+
+    </div>
+    <!-- Start Browse Cards -->
+    <div class="container">
+        <div class="browser-cards d-flex flex-wrap justify-content-center justify-content-xxl-between gap-4">
+            <div class="mycard p-4 ">
+                <img src="img/browse1.png" alt="">
+                <h2 class="mt-4">Election Season</h2>
+                <div class="mycard-head d-flex justify-content-between align-items-center mt-3">
+                    <div class="mycard-head-text d-flex gap-2">
+                        <img src="img/ShapeBrowser.svg" alt="">
+                        <p>From <span>0.05 ETH</span></p>
+                    </div>
+                    <div class="like d-flex align-items-center gap-1">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>24</p>
+                    </div>
+                </div>
+                <img src="img/Line 7.png" class="mb-4 " alt="">
+                <a href="" class="mybtna text-white fw-bold ">Place bid</a>
+            </div>
+            <div class="mycard p-4">
+                <img src="img/Browse3.png" alt="">
+                <h2 class="mt-4">Election Season</h2>
+                <div class="mycard-head d-flex justify-content-between align-items-center mt-3">
+                    <div class="mycard-head-text d-flex gap-2">
+                        <img src="img/ShapeBrowser.svg" alt="">
+                        <p>From <span>0.05 ETH</span></p>
+                    </div>
+                    <div class="like d-flex align-items-center gap-1">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>24</p>
+                    </div>
+                </div>
+                <img src="img/Line 7.png" class="mb-4 " alt="">
+                <a href="" class="mybtna text-white fw-bold ">Place bid</a>
+            </div>
+            <div class="mycard p-4">
+                <img src="img/card-img2.png" alt="">
+                <h2 class="mt-4">Election Season</h2>
+                <div class="mycard-head d-flex justify-content-between align-items-center mt-3">
+                    <div class="mycard-head-text d-flex gap-2">
+                        <img src="img/ShapeBrowser.svg" alt="">
+                        <p>From <span>0.05 ETH</span></p>
+                    </div>
+                    <div class="like d-flex align-items-center gap-1">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>24</p>
+                    </div>
+                </div>
+                <img src="img/Line 7.png" class="mb-4 " alt="">
+                <a href="" class="mybtna text-white fw-bold ">Place bid</a>
+            </div>
+            <div class="mycard p-4">
+                <img src="img/Browse4.png" alt="">
+                <h2 class="mt-4">Election Season</h2>
+                <div class="mycard-head d-flex justify-content-between align-items-center mt-3">
+                    <div class="mycard-head-text d-flex gap-2">
+                        <img src="img/ShapeBrowser.svg" alt="">
+                        <p>From <span>0.05 ETH</span></p>
+                    </div>
+                    <div class="like d-flex align-items-center gap-1">
+                        <i class="fa-regular fa-heart"></i>
+                        <p>24</p>
+                    </div>
+                </div>
+                <img src="img/Line 7.png" class="mb-4 " alt="">
+                <a href="" class="mybtna text-white fw-bold ">Place bid</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Browse Cards -->
+    <!-- Start Nfts Collect -->
+    <div class="container mt-5 mb-5 d-flex flex-column gap-5">
+        <section class="Nfts-collect d-flex align-items-center  justify-content-center justify-content-lg-start flex-wrap flex-lg-nowrap ">
+            <img src="img/collect.png" class="w-100" alt="">
+            <div class="Nfts-collect-content d-flex align-items-center flex-column align-items-lg-start gap-lg-4 gap-md-3 gap-2 ">
+                <h1>Create, Sell well & Collect Your Best Very Fast NFTs.</h1>
+                <p>Create, Sell well & Collect Your Best Very Fast NFTs.The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless</p>
+                <a href="" class="mybtna text-white fw-bold">Connect Wallet</a>
+            </div>
+
+        </section>
+        <img src="img/Brands name.png" class="last-logo" alt="" srcset="">
+        <img src="img/Line 7.png" class="line" alt="">
+    </div>
+    <!-- End Nfts Collect -->
+    <!-- Start Footer -->
+    <div class="container">
+        <footer class="d-flex justify-content-between flex-wrap flex-lg-nowrap align-items-center align-items-lg-start">
+            <div class="marketplace">
+                <h3>marketplace</h3>
+                <ul>
+                    <li><a href="">Explore</a></li>
+                    <li><a href="">Help Center</a></li>
+                    <li><a href="">Become a Partner</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Platform Status</a></li>
+                </ul>
+            </div>
+            <div class="Community">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Favorites</a></li>
+                    <li><a href="">Watchlist</a></li>
+                    <li><a href="">My Collections</a></li>
+                    <li><a href="">Rankings</a></li>
+                    <li><a href="">Activity</a></li>
+                </ul>
+            </div>
+            <div class="categorie">
+                <h3>categorie</h3>
+                <ul>
+                    <li><a href="">Arts</a></li>
+                    <li><a href="">Collectibles</a></li>
+                    <li><a href="">Games</a></li>
+                    <li><a href="">Sports</a></li>
+                    <li><a href="">Trading Cards</a></li>
+                    <li><a href="">Photography</a></li>
+                </ul>
+            </div>
+            <div class="footer-email">
+                <h3>Marketplace</h3>
+                <p>If you’re an NFT enthusiast or are looking to download our NFT App.</p>
+                <div class="email d-flex">
+                    <input type="text" placeholder="Type Your Email">
+                    <a href="" class="mybtn">Subscribe</a>
+                </div>
+                <div class="social-media d-flex gap-4 ">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </footer>
+        </div>
+        <div class="footer-copy ">
+            <div class="container h-100">
+                <div class="copyright d-flex align-items-center justify-content-between p5 h-100">
+                    <p class="fw-semibold text-capitalize">Made By Ouzed</p>
+                    <p>@ 2024 All rights reserved</p>
+                </div>
+            </div>
+        </div>
+        
+    
+
+    <!-- End Footer -->
+    
+
     
 </body>
 <!-- My js file -->

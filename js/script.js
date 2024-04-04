@@ -1,3 +1,12 @@
+// Loading
+window.addEventListener("load",()=>{
+    const loader = document.querySelector(".loading");
+    loader.classList.add("loading-hidden")
+    loader.addEventListener("transitionend",()=>{
+        document.body.removeChild(loader)
+    })
+
+})
 // Search box
 let mybox=document.querySelector("header .seorch .box")
 let myboxInp=document.querySelector("header .seorch .box input")
@@ -15,4 +24,14 @@ document.addEventListener("click",function(event){
     }
     
 })
+
+// nav bar
+function showme(){
+    const nav = document.querySelector(".nav-mobile")
+    nav.style.display="flex"
+}
+function dontShowme(){
+    const nav = document.querySelector(".nav-mobile")
+    nav.style.display="none"
+}
 

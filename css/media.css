@@ -1,0 +1,159 @@
+@media (min-width: 1400px) { 
+    .selected-cards .mycard{
+        width: 312px;
+    }
+}
+@media (max-width: 992px) { 
+    .selected-cards .mycard{
+        width: 312px;
+    }
+    *{
+        animation: none !important;
+        -webkit-animation: none !important;
+}
+.Hero-content h1 span::before{
+    border-right: none !important;
+    
+}
+.Hero-content h1 span{
+    background: linear-gradient(30deg, #0500FA 7.09%, #E01E5A 92.23%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.lebel{
+    gap: 20px !important;
+}
+.ressource{
+    align-items: center !important;
+    gap: 100px !important;
+}
+.ressource-content-1{
+    
+    filter: none !important;
+    -webkit-filter: none !important;
+    justify-content: center !important;
+    
+}
+.ressource-content{
+    gap: 30px;
+}
+.Nfts-collect{
+    text-align: center !important;
+}
+
+
+}
+@media (max-width: 768px) { 
+    .nav-mobile{
+        display: block;
+        z-index: 99999 !important;
+    }
+    .container .first-nav{
+        display: none !important;
+    }
+    .container .seorch{
+        display: none !important;
+    }
+    header{
+        position: sticky !important;
+        top: 0;
+        z-index: 555555;
+    }
+    .Hero-content h1{
+        font-size: 40px !important;
+    }
+    .Hero-content p{
+        font-size: 20px !important;
+        margin-bottom: 30px !important;
+    }
+    .Hero-content-learn p{
+        margin-bottom: 0 !important;
+    }
+    .Hero .slider{
+        display: none !important;
+    }
+    .Hero{
+        margin-bottom: 30px !important;
+    }
+    .lebel > p {
+        font-size: 20px !important;
+        text-align: center !important;
+    }
+    .loading span{
+        font-size: 17px !important;
+    }
+    .special-header p:last-child{
+        font-size: 25px !important;
+        line-height: 30px !important;
+    }
+    .special-header p:first-child {
+        font-size: 65px !important;
+    }
+    .ressource-image {
+        width: 100% !important;
+        
+    }
+    .ressource-img{
+        position: static !important;
+        transform: translate(0px , 0px) !important;
+        -webkit-transform: translate(0px , 0px) !important;
+        -moz-transform: translate(0px , 0px) !important;
+        -ms-transform: translate(0px , 0px) !important;
+        -o-transform: translate(0px , 0px) !important;
+        width: 100% !important;
+}
+.ressource-content-1{
+    width: 100% !important;
+    flex-wrap: wrap !important;
+}
+.ressource-content{
+    gap: 30px;
+    justify-content: center !important;
+    
+}
+.ressource-content-1{
+    filter: none !important;
+    -webkit-filter: none !important;
+    justify-content: center !important;
+}
+.ressource .ressource-img-content .mybtn{
+    padding: 6px 16px !important;
+    font-size: 14px !important;
+}
+.ressource-footer{
+    text-align: center;
+    justify-content: center;
+}
+.ressource-content h2{
+    text-align: center !important ;
+}
+.browse-btn{
+    display: none !important;
+}
+.Nfts-collect{
+    text-align: center !important;
+}
+footer{
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+.Nfts-collect h1{
+    font-size: 26px !important;
+}
+.Nfts-collect p{
+    font-size: 16px !important;
+}
+.footer-email{
+    text-align: center !important;
+}
+.social-media{
+    justify-content: center;
+}
+.copyright p {
+    font-size: 14px !important;
+}
+.container{
+    overflow:  hidden !important; 
+}
+}
